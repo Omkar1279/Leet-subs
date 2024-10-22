@@ -2,15 +2,15 @@ class Solution {
 public:
     int partitionString(string s) {
         
-        set<char> mp;int cnt=0,n=s.size()-1;
+        map<char,int> mp;int cnt=0,n=s.size()-1;
         
         for(char c: s) {
             
-            if(mp.count(c)) {
+            if(mp.find(c)!= mp.end()) {
                 cnt++;
                 mp.clear();
             }
-            mp.insert(c);
+            mp[c]++;
         }
         
         // if(mp[s[n-1]]>1) cnt++;
