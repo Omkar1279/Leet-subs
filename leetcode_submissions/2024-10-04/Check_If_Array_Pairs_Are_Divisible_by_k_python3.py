@@ -14,7 +14,7 @@ class Solution:
             remainder_count[remainder] += 1
 
 
-        for i in range(k //2):
+        for i in range(k //2+1):
             if i == 0:
                 if remainder_count[0]%2 != 0:
                     return 0
