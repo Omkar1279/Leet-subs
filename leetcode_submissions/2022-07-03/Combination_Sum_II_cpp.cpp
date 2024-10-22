@@ -7,7 +7,7 @@ public:
             if(accumulate(temp.begin(),temp.end(),0) == t) s.insert(temp);
             return;
         }
-        else return;
+        else if(accumulate(temp.begin(),temp.end(),0) > t) return;
         
         temp.push_back(c[i]);
         solve(i+1,s,c,t,temp);
