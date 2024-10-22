@@ -4,10 +4,10 @@ public:
         
         int n=nums.size();
         
-        for(int i=0;i<n;i++) {
+        for(int i=0;i<n-k;i++) {
             
-            for(int j=i+1;j<n;j++) {
-                if(nums[i]==nums[j] &&abs(i-j)<=k) return 1;
+            for(int j=i+1;j<=i+k;j++) {
+                if(nums[i]==nums[j]) return 1;
             }
         }
         return 0;
