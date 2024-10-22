@@ -1,29 +1,23 @@
+#include<bits/stdc++.h>
 class Solution {
 public:
     bool isPalindrome(int x) {
-        string no_x = to_string(x);  //convert int x to string.
-        int s = no_x.length();          //s is the size of the string.
         
-        if (x<0)
-        {
-            return false;
+        if(x<0) return 0;
+        else if(x>=0 && x<10) return 1;
+        
+        vector<int> v(10,0);
+        int i=0;
+        while(x>0)  {
+            v[x%10]++;         
+            x/=10;i++;
         }
-        else
-        {
-            int count=0;
-            
-            for (int j=0; j<s/2; j++)              // the loop will continue s/2 times;
-            {
-                if(no_x[j]==no_x[s-1-j])     //e.g. see if in "2343", s[0]==s[3]? string[1] ==string[2].
-                {
-                    count=count+1;    
-                }
-            }
-            if (count==s/2)          
-            {
-                return true;
-            }
+        cout<<i<<endl;
+        for(int j:v) {
+            // cout<<j<<endl;
+            if(j==-1) continue;
+            if(j==1 && i%2==0) {cout<<"j"<<endl;return 0;}
         }
-        return false;
+        return 1;
     }
 };
