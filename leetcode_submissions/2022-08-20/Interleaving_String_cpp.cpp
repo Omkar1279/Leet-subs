@@ -5,13 +5,11 @@ public:
         if(i==s1.size() && j==s2.size()) return 1;
         if(dp[i][j]!=-1) return dp[i][j];        
         
-        bool res=0;
-        if(i<s1.size() and s1[i]==s3[i+j] && j<s2.size() and s2[j]==s3[i+j]) 
-            res= f(i+1,j,s1,s2,s3,dp) || f(i,j+1,s1,s2,s3,dp);
-        else if(i<s1.size() and s1[i]==s3[i+j]) res=f(i+1,j,s1,s2,s3,dp);
-        else if(j<s2.size() and s2[j]==s3[i+j]) res=f(i,j+1,s1,s2,s3,dp);
+        bool res1=0,res2=0;
+        if(i<s1.size() and s1[i]==s3[i+j]) res1=f(i+1,j,s1,s2,s3,dp);
+        if(j<s2.size() and s2[j]==s3[i+j]) res2=f(i,j+1,s1,s2,s3,dp);
         
-        return dp[i][j]= res;
+        return dp[i][j]= res1 || res2;
     }
     
     bool isInterleave(string s1, string s2, string s3) {
