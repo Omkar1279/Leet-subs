@@ -1,33 +1,21 @@
 class Solution {
 public:
     int minIncrementForUnique(vector<int>& nums) {
-        // Edge case: if nums is empty, no increments are needed.
-        if (nums.empty()) return 0;
+        sort(nums.begin(), nums.end());
+        int count=0;
 
-        // Finding the maximum element in the nums array
-        int maxElem = *max_element(nums.begin(), nums.end());
-        
-        // Creating a frequency array to count occurrences of each element
-        vector<int> freq(maxElem + nums.size(), 0);
-        for (int num : nums) {
-            freq[num]++;
-        }
+        for(int i=1;i<nums.size();i++) {
+            // cout<<"i="<<i<<endl;
+            // cout<<"Before:\nnums[i]="<<nums[i]<<", nums[i-1]="<<nums[i-1]<<endl;
 
-        int count = 0;
-        int taken = 0;
-
-        for (int i = 0; i < freq.size(); ++i) {
-            if (freq[i] > 1) {
-                // We have extra elements at this position
-                taken += freq[i] - 1;
-                count -= (freq[i] - 1) * i;
-            } else if (taken > 0 && freq[i] == 0) {
-                // Fill the positions with taken elements
-                taken--;
-                count += i;
+            if(nums[i] <= nums[i-1]) {
+                count += (nums[i-1] - nums[i]) +1;
+                nums[i] += (nums[i-1] - nums[i]) +1;
             }
+            // cout<<"After:\nnums[i]="<<nums[i]<<", nums[i-1]="<<nums[i-1]<<endl;
         }
 
+        // for(int i:nums) cout<<i<<endl;
         return count;
     }
 };
