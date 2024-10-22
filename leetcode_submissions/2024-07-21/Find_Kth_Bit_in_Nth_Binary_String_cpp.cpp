@@ -1,25 +1,24 @@
 class Solution {
 public:
-    char findKthBit(int n, int k) {
-        return findKthBitHelper(n, k);
+    string reverse_invert(string &s) {
+        for(char &c:s) {
+            if(c=='1') c='0';
+            else c='1';
+        }
+        reverse(s.begin(), s.end());
+        return s;
     }
 
-private:
-    char findKthBitHelper(int n, int k) {
-        if (n == 1) {
-            return '0';
+    string find(int n) {
+        if(n==1) {
+            return "0";
         }
-        int len = (1 << n) - 1; // Length of the sequence at level n
-        int mid = len / 2 + 1; // Middle point of the sequence
+        string t= find(n-1); 
+        return t + "1" + reverse_invert(t);
+    }
+    char findKthBit(int n, int k) {
+        string ans=find(n);
         
-        if (k == mid) {
-            return '1';
-        } else if (k < mid) {
-            return findKthBitHelper(n - 1, k);
-        } else {
-            // Reverse and invert part
-            char result = findKthBitHelper(n - 1, len - k + 1);
-            return result == '0' ? '1' : '0';
-        }
+        return ans[k-1];
     }
 };
