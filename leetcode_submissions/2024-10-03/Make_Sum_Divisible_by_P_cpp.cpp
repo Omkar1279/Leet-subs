@@ -2,34 +2,43 @@ class Solution {
 public:
     int minSubarray(vector<int>& nums, int p) {
         int n = nums.size();
-        vector<int> prefix(n+1, 0); 
-        int total_sum = 0;
-        int ans = n;  
+        long total_sum = 0;
         
-        // Step 1: Calculate prefix sum and total sum of the array
-        for (int i = 0; i < n; i++) {
-            total_sum += nums[i];
-            prefix[i+1] = total_sum;  // Prefix sum from nums[0] to nums[i]
+        // Calculate total sum of the array
+        for (int num : nums) {
+            total_sum += num;
         }
         
-        // Step 2: Check if the total sum is already divisible by p
-        if (total_sum % p == 0) return 0;
+        int remainder = total_sum % p;
         
-        // Step 3: Brute force approach to check all subarrays
+        // If the total sum is already divisible by p, return 0
+        if (remainder == 0) return 0;
+        
+        // Hash map to store the prefix sums mod p and their last index
+        unordered_map<int, int> mod_map;
+        mod_map[0] = -1;  // Initialize with prefix sum 0 at index -1
+        
+        long prefix_sum = 0;
+        int min_len = n;  // Initialize the minimum length as the size of the array
+        
+        // Traverse through the array and calculate prefix sums
         for (int i = 0; i < n; i++) {
-            for (int j = i; j < n; j++) {
-                // Calculate the sum of the remaining elements if subarray nums[i...j] is removed
-                int subarray_sum = prefix[j+1] - prefix[i];  // Sum of nums[i...j]
-                int remaining_sum = total_sum - subarray_sum;
-                
-                // Step 4: Check if the remaining sum is divisible by p
-                if (remaining_sum % p == 0) {
-                    ans = min(ans, j - i + 1);  // Update the answer with the smallest subarray length
-                }
+            prefix_sum += nums[i];
+            int current_remainder = prefix_sum % p;
+            
+            // Target remainder we are looking for in the prefix sums
+            int target_remainder = (current_remainder - remainder + p) % p;
+            
+            // If we have seen this target remainder before, calculate the subarray length
+            if (mod_map.find(target_remainder) != mod_map.end()) {
+                min_len = min(min_len, i - mod_map[target_remainder]);
             }
+            
+            // Store the current remainder and its index in the hash map
+            mod_map[current_remainder] = i;
         }
         
-        // Step 5: If we didn't find any valid subarray, return -1, otherwise return the answer
-        return ans == n ? -1 : ans;
+        // If we found a valid subarray, return its length; otherwise, return -1
+        return min_len == n ? -1 : min_len;
     }
 };
