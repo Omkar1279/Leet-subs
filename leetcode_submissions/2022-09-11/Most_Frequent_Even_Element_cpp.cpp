@@ -3,21 +3,14 @@ public:
     int size=1e5+1;
     int mostFrequentEven(vector<int>& nums) {
         
-        map<int,int> mp;int m=0,ans;
+        vector<int> v(size,-1);
         
         for(int i:nums) {
-            if(i%2==0) mp[i]++;
-        }
-        
-        if(mp.empty()) return -1;
-        
-        for(auto it=mp.rbegin();it!=mp.rend();it++) {
-            if(it->second>=m) {
-                m=it->second;
-                ans=it->first;
+            
+            if(i%2==0) {
+                v[i]++;
             }
         }
-        
-        return ans;
+        return (max_element(v.begin(), v.end()) - v.begin())!=0 ? (max_element(v.begin(), v.end()) - v.begin()) : -1;
     }
 };
