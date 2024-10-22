@@ -8,14 +8,17 @@ public:
             
             if(nums[i]==nums[i-1]) continue;
             
-            int j=i+1;
-            
-            while(nums[i]==nums[j] && j<n) j++;
-            
-            if(nums[i] < nums[j] && nums[i] < nums[i-1]) ans++;
+            if(nums[i]==nums[i+1]) {
                 
-            else if(nums[i] > nums[j] && nums[i] > nums[i-1]) ans++;
-            
+                if(nums[i] < nums[i+2] && i+2<n && nums[i] < nums[i-1]) ans++;
+                
+                else if(nums[i] > nums[i+2] && i+2<n && nums[i] > nums[i-1]) ans++;
+            }
+            else {
+                if(nums[i] < nums[i+1] && i+1<n && nums[i] < nums[i-1]) ans++;
+                
+                else if(nums[i] > nums[i+1] && i+1<n && nums[i] > nums[i-1]) ans++;
+            }
         }
         return ans;
     }
