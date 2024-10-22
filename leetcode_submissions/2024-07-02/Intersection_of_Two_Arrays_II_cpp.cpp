@@ -6,7 +6,6 @@ public:
 
         vector<int> ans;
 
-        if(nums1==nums2) return nums1;
         if(nums1.size() > nums2.size()) nums1.swap(nums2);
 
         int j=0;
