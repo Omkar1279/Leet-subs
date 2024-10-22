@@ -11,11 +11,12 @@
 class Solution {
 public:
     ListNode* merge2Lists(ListNode* l1, ListNode* l2) {
+        
+        if(!l1 && !l2) return NULL;
         if (!l1) return l2;
         if (!l2) return l1;
-        ListNode* head = l1->val <= l2->val? l1 : l2;
-        head->next = l1->val <= l2->val ? merge2Lists(l1->next, l2) : merge2Lists(l1, l2->next);
-        return head;
+
+        return new ListNode((l1->val <= l2->val) ? l1->val : l2->val,(l1->val <= l2->val) ? merge2Lists(l1->next, l2) : merge2Lists(l1, l2->next));
     }
     
     ListNode* mergeKLists(vector<ListNode*>& lists) {
