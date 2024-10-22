@@ -16,7 +16,7 @@ public:
 
         if(head->val == val) return removeElements(head->next,val);
 
-        head->next = removeElements(head->next,val);
+        had->next = removeElements(head->next,val);
         return head;
     }
 };
