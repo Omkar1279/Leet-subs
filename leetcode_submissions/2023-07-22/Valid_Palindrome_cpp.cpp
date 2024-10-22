@@ -10,11 +10,9 @@ public:
             else if(isdigit(c)) s+=c;
         }
 
-        int i=0,j=s.size();j--;
-        while(i<=j) {
-            if(s[i]!=s[j]) return 0;
-            i++;j--;
-        }
-        return 1;
+        string t=s;
+        reverse(t.begin(),t.end());
+
+        return (t==s);
     }
 };
