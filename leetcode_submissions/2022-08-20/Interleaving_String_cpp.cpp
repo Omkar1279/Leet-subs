@@ -16,8 +16,7 @@ public:
     
     bool isInterleave(string s1, string s2, string s3) {
         
-        int n=s1.size(),m=s2.size();
-        vector<vector<int>> dp(n+1,vector<int> (m+1,-1));
+        vector<vector<int>> dp(201,vector<int> (201,-1));
         
         if(s1.size()+s2.size()!=s3.size()) return 0;
         
