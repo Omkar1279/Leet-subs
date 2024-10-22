@@ -12,25 +12,24 @@
 class Solution {
 public:
     int minDepth(TreeNode* root) {
-        if (!root) 
-            return 0;
 
-        int depth = 0;
-        queue<TreeNode*> q;
+        if(!root) return 0;
+        queue<TreeNode* > q;
+
+        int depth =1;
         q.push(root);
-        while (!q.empty()) {
+
+        while(!q.empty()) {
             int size = q.size();
-            depth++;
-            for (int i = 0; i < size; i++) {
-                TreeNode* cur = q.front(); 
+
+            for(int i=0;i<q.size();i++) {
+                TreeNode* top = q.front();
+                if(!top->left && !top->right) return depth;
+
                 q.pop();
-                if (cur->left)
-                    q.push(cur->left);
-                if (cur->right)
-                    q.push(cur->right);
-                if (cur->left == NULL && cur->right == NULL) {
-                    return depth;
-                }
+                if(top->left) q.push(top->left);
+                if(top->right) q.push(top->right);
+                depth++;
             }
         }
         return depth;
