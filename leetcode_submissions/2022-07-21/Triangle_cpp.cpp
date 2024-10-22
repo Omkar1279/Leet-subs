@@ -1,22 +1,24 @@
 class Solution {
 public:
-
+    
+    int help(int i, int j, vector<vector<int>> t ,vector<vector<int>>& dp) {
+        
+        if(i==t.size()-1) return t[i][j];
+        
+        if(dp[i][j] != -1) return dp[i][j];
+        
+        if(j>=t[i].size()) return 10e6;
+        
+        return dp[i][j]=t[i][j] + min(help(i+1,j,t,dp),help(i+1,j+1,t,dp));
+        
+    }
+    
     int minimumTotal(vector<vector<int>>& t) {
         
         int n=t.size();
         
-        vector<vector<int>> dp (n, vector<int> (n,0));
+        vector<vector<int>> dp (n, vector<int> (n,-1));
         
-        for(int k=0;k<n;k++) {
-            
-            dp[n-1][k]=t[n-1][k];
-            
-            for(int i=n-2;i>=0;i--) {
-                for(int j=i;j>=0;j--) {
-                    dp[i][j]= t[i][j] + min(dp[i+1][j],dp[i+1][j+1]);
-                }
-            }
-        }
-        return dp[0][0];
+        return help(0,0,t,dp);
     }
 };
