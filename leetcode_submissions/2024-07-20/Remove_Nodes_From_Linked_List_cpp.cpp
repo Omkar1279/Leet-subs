@@ -10,37 +10,26 @@
  */
 class Solution {
 public:
-    ListNode* reverseList(ListNode* head) {
-        ListNode* prev = nullptr;
-        ListNode* cur = head;
-        while (cur != nullptr) {
-            ListNode* next = cur->next;
-            cur->next = prev;
-            prev = cur;
-            cur = next;
-        }
-        return prev;
-    }
-
     ListNode* removeNodes(ListNode* head) {
-        if (head == nullptr || head->next == nullptr) {
-            return head;
-        }
+        
+        ListNode* cur= head;
+        stack<ListNode* > s;
 
-        // Reverse the list
-        ListNode* reversedHead = reverseList(head);
-
-        // Process the reversed list to remove nodes
-        ListNode* cur = reversedHead;
-        while (cur != nullptr && cur->next != nullptr) {
-            if (cur->val > cur->next->val) {
-                cur->next = cur->next->next;
-            } else {
-                cur = cur->next;
+        while(cur) {
+            while (!s.empty() && s.top()->val < cur->val) {
+                s.pop();
             }
+            s.push(cur);
+            cur=cur->next;
         }
 
-        // Reverse the list back to the original order
-        return reverseList(reversedHead);
+        head=NULL;
+        while (!s.empty()) {
+            ListNode* top = s.top();
+            s.pop();
+            top->next = head;
+            head = top;
+        }
+        return head;
     }
 };
