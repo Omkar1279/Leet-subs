@@ -9,10 +9,7 @@ public:
         
         for(int i=1;i<words.size();i++) {
             
-            if(words[i].size() != words[i-1].size()) {
-                sort(temp[i].begin(),temp[i].end());
-                continue;
-            }
+            if(words[i].size() != words[i-1].size()) continue;
             
             sort(temp[i].begin(),temp[i].end());
             
