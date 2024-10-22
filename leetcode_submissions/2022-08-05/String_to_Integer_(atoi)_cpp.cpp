@@ -1,30 +1,23 @@
 class Solution {
 public:
     int myAtoi(string s) {
-        long long k=0;int sign=1,i=0;
+        long long k=0;int sign;
         
-        while( i<s.size()&&s[i]==' ' ) i++;
-        
-        if(s[i]=='-') {sign=-1;i++;}
-        else if(s[i]=='+') i++;
-        
-        if(!isdigit(s[i])) return 0;
-        
-        for(;i<s.size();i++) {
+        for(int i=0;i<s.size();i++) {
             
-            if(!isdigit(s[i])) break;
+            if(isalpha(s[i]) || s[i]== ' ' || s[i] == '.') continue;
 
             if(isdigit(s[i])) {
                 
-                if (sign != -1 && k*10+(s[i]-'0') >INT_MAX) return INT_MAX;
-                if (sign == -1 && k*10+(s[i]-'0') >INT_MAX) return INT_MIN;
+                k = k*10+s[i]-'0';
                 
-                k *= 10;
-                k += (s[i]-'0');
+                if(i>0 && s[i-1] == '-') sign = -1;
                 
                 if( i<s.size() && s[i+1] == ' ') break;
             }
         }
+        if (sign != -1 && k>INT_MAX) return INT_MAX;
+        if (sign == -1 && k>INT_MAX) return INT_MIN;
 
         return (int) k*sign;
     }
