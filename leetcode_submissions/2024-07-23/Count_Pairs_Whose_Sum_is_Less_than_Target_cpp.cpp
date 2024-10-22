@@ -4,14 +4,11 @@ public:
         int n= nums.size(), ans=0;
         sort(nums.begin(), nums.end());
 
-        int lo=0,hi=n-1;
-
-        while(lo<hi) {
-            if(nums[lo] + nums[hi] < target) {
-                ans+= (hi-lo);
-                lo++;
+        for(int i=0;i<n;i++) {
+            for(int j=i+1;j<n;j++) {
+                if(nums[i]+nums[j] >= target) break;
+                else ans++;
             }
-            else hi--;
         }
         return ans;
     }
