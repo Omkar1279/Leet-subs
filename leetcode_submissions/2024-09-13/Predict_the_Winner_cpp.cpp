@@ -1,19 +1,23 @@
 class Solution {
-    // Recursive helper function to calculate if Player 1 can win
-    int helper(vector<int>& nums, int l, int h) {
-        if (l == h) return nums[l];  // Only one number left, pick it
+    bool help(vector<int>& nums, int turn, int p1Score, int p2Score, int l, int h) {
+        // Base case: no more elements to pick
+        if (l > h) return p1Score >= p2Score;
 
-        // Maximize Player 1's score: Either pick from the left or right
-        // Player 2 will also play optimally to minimize Player 1's score
-        int pickLeft = nums[l] - helper(nums, l + 1, h);
-        int pickRight = nums[h] - helper(nums, l, h - 1);
-
-        // Player 1 will choose the move that maximizes their score
-        return max(pickLeft, pickRight);
+        // If it's Player 1's turn
+        if (turn == 1) {
+            // Player 1 picks either the leftmost or rightmost element, maximizing their score
+            return help(nums, 0, p1Score + nums[l], p2Score, ++l, h) || 
+                   help(nums, 0, p1Score + nums[h], p2Score, l, --h);
+        }
+        // If it's Player 2's turn
+        else {
+            // Player 2 picks either the leftmost or rightmost element, minimizing Player 1's score
+            return help(nums, 1, p1Score, p2Score + nums[l], ++l, h) && 
+                   help(nums, 1, p1Score, p2Score + nums[h], l, --h);
+        }
     }
-
 public:
     bool predictTheWinner(vector<int>& nums) {
-        return helper(nums, 0, nums.size() - 1) >= 0;
+        return help(nums, 1, 0, 0, 0, nums.size() - 1);
     }
 };
