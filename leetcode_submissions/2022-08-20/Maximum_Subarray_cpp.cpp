@@ -9,9 +9,7 @@ public:
         
         for(int i=0;i<nums.size();i++) {
             
-            if(sum<0) sum=0;
-            
-            sum +=nums[i];
+            sum = max(0 , nums[i]+sum);
             
             ans= max(ans,sum);
             
