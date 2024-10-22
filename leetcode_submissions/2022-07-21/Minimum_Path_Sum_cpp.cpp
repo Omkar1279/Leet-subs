@@ -4,18 +4,21 @@ public:
         
         if(i==0 && j==0) return grid[i][j];
         
-        if(i<0 || j<0) return 10e6;
+        if(i<0 || j<0) return 101;
         
         if(dp[i][j] != -1) return dp[i][j];
         
-        return dp[i][j]=grid[i][j] + min(solve(i-1,j,grid,dp),solve(i,j-1,grid,dp));
+        int left = grid[i][j] + solve(i,j-1,grid,dp);
+        int up = grid[i][j] + solve(i-1,j,grid,dp);
+        
+        return dp[i][j]=min(left,up);
     }
     
     int minPathSum(vector<vector<int>>& grid) {
         
         if(grid.size()==1 && grid[0].size()==1) return grid[0][0];
         
-        vector<vector<int>> dp (201, vector<int>(201 , -1));
+        vector<vector<int>> dp (grid.size(), vector<int>(grid[0].size() , -1));
         
         return solve(grid.size()-1,grid[0].size()-1,grid,dp);
     }
