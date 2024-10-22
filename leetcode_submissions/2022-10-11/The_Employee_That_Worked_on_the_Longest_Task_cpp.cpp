@@ -10,7 +10,6 @@ public:
             
             else {
                 if((logs[i][1]-logs[i-1][1]) > max) {max = logs[i][1]-logs[i-1][1];id=logs[i][0];}
-                else if((logs[i][1]-logs[i-1][1]) == max) id= min(id,logs[i][0]);
             }
         }
         return id;
