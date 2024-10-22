@@ -13,9 +13,9 @@ public:
         
         for(char c : message) {
             
-            if(c==' ') ans+=' ';
+            if(c==' ') {ans+=' ';continue;}
             
-            else ans+=mp[c];
+            ans+=mp[c];
         }
         return ans;
     }
