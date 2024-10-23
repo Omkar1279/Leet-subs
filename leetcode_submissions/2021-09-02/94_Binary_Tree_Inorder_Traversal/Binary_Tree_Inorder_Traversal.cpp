@@ -13,9 +13,10 @@ class Solution {
 public:
     
     vector<int> inorderTraversal(TreeNode* root) {
-        vector<int>v;
-        if(root == NULL) return v;
         
+        if(root == NULL) return;
+        
+        vector<int>v;
         stack<pair<TreeNode*,int>>s;
         
         s.push({root,0});
@@ -28,7 +29,7 @@ public:
             
             if(curr == NULL || cnt >=3) continue;
             
-            s.push({curr, cnt+1});
+            s.push({cur, cnt+1});
             
             if(cnt==0) s.push({curr->left,0});
             else if(cnt==1) v.push_back(curr->val);
