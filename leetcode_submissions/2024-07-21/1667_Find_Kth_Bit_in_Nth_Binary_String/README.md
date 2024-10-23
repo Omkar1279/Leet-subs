@@ -2,10 +2,10 @@
 
 - Difficulty: Unknown
 - Language: cpp
-- Runtime: 0 ms
-- Memory: 7.2 MB
+- Runtime: 11 ms
+- Memory: 59.2 MB
 - Status: N/A
-- Timestamp: 2024-07-21 20:13:59
+- Timestamp: 2024-07-21 20:11:17
 
 ## Problem Link
 [Find Kth Bit in Nth Binary String](https://leetcode.com/problems/)
