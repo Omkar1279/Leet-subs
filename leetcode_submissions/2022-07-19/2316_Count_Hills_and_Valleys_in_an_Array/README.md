@@ -2,10 +2,10 @@
 
 - Difficulty: Unknown
 - Language: cpp
-- Runtime: 9 ms
-- Memory: 8.9 MB
-- Status: Accepted
-- Timestamp: 2022-07-19 10:07:34
+- Runtime: N/A
+- Memory: N/A
+- Status: Runtime Error
+- Timestamp: 2022-07-19 10:06:39
 
 ## Problem Link
 [Count Hills and Valleys in an Array](https://leetcode.com/problems/count-hills-and-valleys-in-an-array)
