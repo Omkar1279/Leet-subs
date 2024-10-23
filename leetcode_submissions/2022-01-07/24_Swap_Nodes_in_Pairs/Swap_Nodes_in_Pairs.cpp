@@ -19,6 +19,7 @@ public:
         else return;
         
         if(head->next->next != NULL) help(head->next->next);
+        
         else return;
     }
     
