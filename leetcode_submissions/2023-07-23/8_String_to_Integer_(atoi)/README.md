@@ -2,10 +2,10 @@
 
 - Difficulty: Unknown
 - Language: cpp
-- Runtime: 2 ms
-- Memory: 7.5 MB
-- Status: Accepted
-- Timestamp: 2023-07-23 20:22:29
+- Runtime: N/A
+- Memory: N/A
+- Status: Runtime Error
+- Timestamp: 2023-07-23 20:21:36
 
 ## Problem Link
 [String to Integer (atoi)](https://leetcode.com/problems/string-to-integer-atoi)
