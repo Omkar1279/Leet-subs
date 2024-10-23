@@ -4,7 +4,7 @@ public:
     
     int fib(int n) {
         
-        if(n<2) return n;
+        if(n==0 || n==1) return n;
         
         if(v[n] > 0) return v[n];
         
