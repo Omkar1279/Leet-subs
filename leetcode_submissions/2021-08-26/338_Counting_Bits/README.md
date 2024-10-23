@@ -2,10 +2,10 @@
 
 - Difficulty: Unknown
 - Language: cpp
-- Runtime: 5 ms
-- Memory: 7.6 MB
+- Runtime: 6 ms
+- Memory: 7.9 MB
 - Status: Accepted
-- Timestamp: 2021-08-26 22:04:38
+- Timestamp: 2021-08-26 22:03:03
 
 ## Problem Link
 [Counting Bits](https://leetcode.com/problems/counting-bits)
