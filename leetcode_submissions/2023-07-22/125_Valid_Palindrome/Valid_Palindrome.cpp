@@ -1,21 +1,20 @@
 class Solution {
 public:
-    bool isPalindrome(string s) {
-        int toright = 0;
-        int toleft = s.size() - 1;
-        if (s.empty()) return true;
-        while (toright < toleft) {
-            if (isalnum(s[toright]) && isalnum(s[toleft]) && tolower(s[toright]) != tolower(s[toleft])) {
-                return false;
-            } else if (!isalnum(s[toright])){
-                toright++;
-            } else if (!isalnum(s[toleft])){
-                toleft--;
-            } else {
-                toright++;
-                toleft--;
+    bool isPalindrome(string str) {
+        string s="";
+        for(char c:str) {
+            if(isspace(c)) continue;
+            if(isalpha(c)) {
+                s+=tolower(c);
             }
+            else if(isdigit(c)) s+=c;
         }
-        return true;
+
+        int i=0,j=s.size();j--;
+        while(i<=j) {
+            if(s[i]!=s[j]) return 0;
+            i++;j--;
+        }
+        return 1;
     }
 };
