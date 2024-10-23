@@ -10,23 +10,20 @@ public:
         vector<int> v;
         
         sort(in.begin(),in.end());
-    
+        
+        if((in[0][0] <= in[1][0]) && (in[1][0] <= in[0][1])) {
+            v.push_back(min(in[0][0],in[1][0]));
+            v.push_back(max(in[0][1],in[1][1]));
+            ans.push_back(v);
+            v.clear();
 
-        for(int i=1;i<n;i++) {
-            
-            if(ans.empty()) {
-                if((in[i-1][0] <= in[i][0]) && (in[i][0] <= in[i-1][1])) {
-                    v.push_back(min(in[i-1][0],in[i][0]));
-                    v.push_back(max(in[i-1][1],in[i][1]));
-                    ans.push_back(v);
-                    v.clear();
-                }
-                else {
-                    ans.push_back(in[i-1]);
-                    ans.push_back(in[i]);
-                }
-            }
-            
+        }
+        else {
+            ans.push_back(in[0]);
+            ans.push_back(in[1]);
+        }
+
+        for(int i=2;i<n;i++) {
             vector<int> temp = ans.back();
             if((temp[0] <= in[i][0]) && (in[i][0] <= temp[1])) {
                 
