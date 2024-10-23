@@ -12,13 +12,9 @@ public:
         
         if(node==NULL || node->next==NULL) return;
         
-        ListNode *temp=node->next;
-        
         node->val=node->next->val;
         
         node->next=node->next->next;
-        
-        delete(temp);
         
     }
 };
