@@ -20,7 +20,7 @@ public:
             }
             mp[nums[i]]=i;
         }
-        if(nums[n-2]+nums[n-1]+nums[n-3]==0) s.insert({nums[n-3],nums[n-2],nums[n-1]});
+        if(nums[n-2]+nums[n-1]+nums[n-3]==0) s.insert({n-3,n-2,n-1});
         
         vector<vector<int>> v(s.begin(),s.end()) ;
         return v;
