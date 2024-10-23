@@ -2,10 +2,10 @@
 
 - Difficulty: Unknown
 - Language: cpp
-- Runtime: 32 ms
-- Memory: 12.8 MB
+- Runtime: 9 ms
+- Memory: 12.7 MB
 - Status: Accepted
-- Timestamp: 2022-10-19 09:56:56
+- Timestamp: 2022-10-19 09:55:15
 
 ## Problem Link
 [Top K Frequent Words](https://leetcode.com/problems/top-k-frequent-words)
