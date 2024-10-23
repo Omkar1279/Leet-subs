@@ -4,8 +4,8 @@
 - Language: cpp
 - Runtime: N/A
 - Memory: N/A
-- Status: Time Limit Exceeded
-- Timestamp: 2024-10-03 12:17:03
+- Status: Wrong Answer
+- Timestamp: 2024-10-03 00:54:33
 
 ## Problem Link
 [Check If Array Pairs Are Divisible by k](https://leetcode.com/problems/check-if-array-pairs-are-divisible-by-k)
