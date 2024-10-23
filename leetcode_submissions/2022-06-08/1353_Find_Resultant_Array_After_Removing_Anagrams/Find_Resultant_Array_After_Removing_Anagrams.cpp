@@ -7,8 +7,6 @@ public:
         
         for(int i=1;i<words.size();i++) {
             
-            if(words[i].size() != words[i-1].size()) continue;
-            
             sort(temp[i].begin(),temp[i].end());
             sort(temp[i-1].begin(),temp[i-1].end());
             
