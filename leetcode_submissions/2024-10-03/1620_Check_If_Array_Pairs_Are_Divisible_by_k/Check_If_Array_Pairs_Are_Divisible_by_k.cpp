@@ -5,12 +5,6 @@ public:
         
         // Ensure that the array has an even number of elements
         if (n % 2 != 0) return false;
-        
-        // Pre-process remainders
-        for (int i = 0; i < n; ++i) {
-            // Calculate remainder and handle negative numbers correctly
-            arr[i] = ((arr[i] % k) + k) % k;
-        }
 
         // Iterate over each element to try and find a pair
         for (int i = 0; i < n; ++i) {
@@ -24,7 +18,7 @@ public:
                 // Skip if this element has already been paired
                 if (arr[j] == -1) continue;
                 
-                // Check if the sum of the remainders of arr[i] and arr[j] is divisible by k
+                // Check if the sum of arr[i] and arr[j] is divisible by k
                 if ((arr[i] + arr[j]) % k == 0) {
                     // Mark both elements as paired by setting them to -1
                     arr[i] = -1;
