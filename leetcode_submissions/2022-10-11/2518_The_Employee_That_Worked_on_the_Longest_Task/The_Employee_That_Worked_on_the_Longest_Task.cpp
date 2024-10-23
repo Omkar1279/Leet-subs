@@ -6,7 +6,7 @@ public:
         
         for(int i=0;i<size;i++) {
             
-            if(i==0) {max=logs[i][1];id=logs[i][0];}
+            if(i==0) max=logs[i][1];
             
             else {
                 if((logs[i][1]-logs[i-1][1]) > max) {max = logs[i][1]-logs[i-1][1];id=logs[i][0];}
