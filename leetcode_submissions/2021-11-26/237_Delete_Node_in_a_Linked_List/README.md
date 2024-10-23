@@ -2,10 +2,10 @@
 
 - Difficulty: Unknown
 - Language: cpp
-- Runtime: 23 ms
-- Memory: 7.6 MB
+- Runtime: 19 ms
+- Memory: 7.7 MB
 - Status: Accepted
-- Timestamp: 2021-11-26 12:57:40
+- Timestamp: 2021-11-26 12:56:43
 
 ## Problem Link
 [Delete Node in a Linked List](https://leetcode.com/problems/delete-node-in-a-linked-list)
