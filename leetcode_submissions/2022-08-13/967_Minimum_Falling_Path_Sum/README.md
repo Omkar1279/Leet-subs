@@ -2,10 +2,10 @@
 
 - Difficulty: Unknown
 - Language: cpp
-- Runtime: 29 ms
-- Memory: 10.3 MB
-- Status: Accepted
-- Timestamp: 2022-08-13 15:22:50
+- Runtime: N/A
+- Memory: N/A
+- Status: Wrong Answer
+- Timestamp: 2022-08-13 15:20:27
 
 ## Problem Link
 [Minimum Falling Path Sum](https://leetcode.com/problems/minimum-falling-path-sum)
