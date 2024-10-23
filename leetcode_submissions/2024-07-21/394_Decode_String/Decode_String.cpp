@@ -1,40 +1,33 @@
 class Solution {
 public:
     string decodeString(string s) {
-        int index = 0;
-        return decodeHelper(s, index);
-    }
-
-private:
-    string decodeHelper(const string& s, int& index) {
-        string result = "";
-        int num = 0;
-
-        while (index < s.length()) {
-            char c = s[index];
-
+        stack<string> strStack;
+        stack<int> numStack;
+        string currentStr = "";
+        int currentNum = 0;
+        
+        for (char &c : s) {
             if (isdigit(c)) {
-                // Build the number for the repeat count
-                num = num * 10 + (c - '0');
-                index++;
+                currentNum = currentNum * 10 + (c - '0');
             } else if (c == '[') {
-                // Move past '[' and decode the substring recursively
-                string nested = decodeHelper(s, ++index);
-                for (int i = 0; i < num; ++i) {
-                    result += nested;
-                }
-                num = 0; // Reset the number after using it
+                numStack.push(currentNum);
+                strStack.push(currentStr);
+                currentNum = 0;
+                currentStr = "";
             } else if (c == ']') {
-                // End of the current recursive call
-                index++;
-                return result;
+                string temp = currentStr;
+                currentStr = strStack.top(); 
+                strStack.pop();
+                int repeatTimes = numStack.top(); 
+                numStack.pop();
+                for (int i = 0; i < repeatTimes; ++i) {
+                    currentStr += temp;
+                }
             } else {
-                // Normal character, just add it to the result
-                result += c;
-                index++;
+                currentStr += c;
             }
         }
-
-        return result;
+        
+        return currentStr;
     }
 };
