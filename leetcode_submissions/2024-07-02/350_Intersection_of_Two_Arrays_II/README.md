@@ -4,8 +4,8 @@
 - Language: cpp
 - Runtime: N/A
 - Memory: N/A
-- Status: Wrong Answer
-- Timestamp: 2024-07-02 12:07:06
+- Status: Runtime Error
+- Timestamp: 2024-07-02 12:04:39
 
 ## Problem Link
 [Intersection of Two Arrays II](https://leetcode.com/problems/intersection-of-two-arrays-ii)
