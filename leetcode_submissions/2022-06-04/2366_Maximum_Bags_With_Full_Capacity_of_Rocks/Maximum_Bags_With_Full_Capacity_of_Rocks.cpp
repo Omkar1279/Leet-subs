@@ -15,7 +15,7 @@ public:
                        
             if(v[i] == 0) ans++;
             
-            else if ((additionalRocks-v[i]) >= 0) {
+            else if ((additionalRocks-v[i]) >= 0 && additionalRocks > 0) {
                 additionalRocks-=v[i];
                 // cout<<"2\n";
                 ans++;
