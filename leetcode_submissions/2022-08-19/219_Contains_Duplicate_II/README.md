@@ -2,10 +2,10 @@
 
 - Difficulty: Unknown
 - Language: cpp
-- Runtime: 301 ms
-- Memory: 77.1 MB
-- Status: Accepted
-- Timestamp: 2022-08-19 00:22:04
+- Runtime: N/A
+- Memory: N/A
+- Status: Time Limit Exceeded
+- Timestamp: 2022-08-19 00:18:17
 
 ## Problem Link
 [Contains Duplicate II](https://leetcode.com/problems/contains-duplicate-ii)
