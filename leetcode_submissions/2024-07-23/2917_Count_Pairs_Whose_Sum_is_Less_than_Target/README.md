@@ -1,0 +1,12 @@
+# Count Pairs Whose Sum is Less than Target
+
+- Difficulty: Unknown
+- Language: cpp
+- Runtime: 3 ms
+- Memory: 24.1 MB
+- Status: Accepted
+- Timestamp: 2024-07-23 14:46:45
+
+## Problem Link
+[Count Pairs Whose Sum is Less than Target](https://leetcode.com/problems/count-pairs-whose-sum-is-less-than-target)
+
