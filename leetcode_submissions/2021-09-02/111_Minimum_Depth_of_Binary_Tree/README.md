@@ -2,10 +2,10 @@
 
 - Difficulty: Unknown
 - Language: cpp
-- Runtime: 424 ms
-- Memory: 144.7 MB
+- Runtime: 465 ms
+- Memory: 144.8 MB
 - Status: Accepted
-- Timestamp: 2021-09-02 19:44:14
+- Timestamp: 2021-09-02 19:41:22
 
 ## Problem Link
 [Minimum Depth of Binary Tree](https://leetcode.com/problems/minimum-depth-of-binary-tree)
