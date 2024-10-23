@@ -27,7 +27,7 @@ public:
             
             else if(a[i] == 0) {
                 
-                dp[i]=1000;
+                dp[i]=INT_MAX;
             }
             
             else {
