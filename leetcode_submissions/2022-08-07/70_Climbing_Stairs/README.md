@@ -2,10 +2,10 @@
 
 - Difficulty: Unknown
 - Language: cpp
-- Runtime: 0 ms
-- Memory: 5.9 MB
-- Status: Accepted
-- Timestamp: 2022-08-07 19:52:24
+- Runtime: N/A
+- Memory: N/A
+- Status: Runtime Error
+- Timestamp: 2022-08-07 19:50:33
 
 ## Problem Link
 [Climbing Stairs](https://leetcode.com/problems/climbing-stairs)
