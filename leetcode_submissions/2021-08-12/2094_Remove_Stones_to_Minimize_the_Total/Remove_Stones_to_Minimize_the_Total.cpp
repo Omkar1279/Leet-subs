@@ -7,18 +7,15 @@ public:
     
     int minStoneSum(vector<int>& piles, int k) {
  
-        priority_queue<int>pq(piles.begin() , piles.end());
+        sort(piles.begin(), piles.end(), greater<int>());
         
-        int ans=accumulate(piles.begin() , piles.end() ,0);
-        
-        while(k--) {
+        for(int i=0;i<k;i++) {
             
-            int a=pq.top();
-            pq.pop();
-            pq.push(floor(a));
-            ans-=a/2;
+            if(piles[i] != floor(piles[i]))
+                piles[i]=(int)floor(piles[i]);
+            
         }
         
-        return ans;
+        return accumulate(piles.begin() , piles.end() , 0);
     }
 };
