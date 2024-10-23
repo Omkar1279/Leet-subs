@@ -2,29 +2,24 @@ class Solution {
 public:
     string convert(string s, int numRows) {
         
-            map<int, string> mp;
-            int lvl = 0;
-            int down = 1;
-            for (int i = 0; i < s.size(); i++) {
-                if (lvl < numRows && down)
-                    mp[lvl++] += s[i];
-                else if (!down && lvl >= 0)
-                    mp[lvl--] += s[i];
-                if (lvl == 0) {
-                    lvl = 0;
-                    down = 1;
-                }
-                
-                else if (lvl == numRows - 1) {
-                    down = 0;
-                    lvl = numRows - 1;
-                }
+        vector<string> v (1001,"");
+        
+        int n=s.size(),l=0,r=0,c=0;
+        
+        while(l<n) {
+            
+            for(int i=0;i<numRows && l<n ;i++) {
+                v[i].push_back(s[l++]);
             }
-
-            string ans = "";
-            for (auto i: mp) {
-                ans += i.second;
-            }
-            return numRows == 1 ? s : ans;
+            
+            for(int j=numRows-2;j>=1 && l<n;j--) {
+                v[j].push_back(s[l++]);
+            }  
+        }
+        string ans;
+        for(auto &i:v) {
+            ans+=i;
+        }
+        return ans;
     }
 };
