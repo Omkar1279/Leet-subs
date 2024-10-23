@@ -2,7 +2,7 @@ class Solution {
 public:
     string reverse_invert(string &s) {
         for(char &c:s) {
-            if(c=='1') c='0';
+            if(c=='1') c=0;
             else c='1';
         }
         reverse(s.begin(), s.end());
