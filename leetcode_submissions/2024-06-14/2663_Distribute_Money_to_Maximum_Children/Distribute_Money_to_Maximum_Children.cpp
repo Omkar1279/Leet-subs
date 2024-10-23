@@ -5,9 +5,9 @@ public:
 
         money-=children;
 
-        if (money / 7 >= children) {
-            return children;
-        }
+        if(money%7==0) return children;
+
+        int ans = money/7;
 
         int max_eight_dollar_children = money / 7;
 
