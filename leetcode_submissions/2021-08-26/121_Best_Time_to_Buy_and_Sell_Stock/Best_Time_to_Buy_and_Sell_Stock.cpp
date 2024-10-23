@@ -6,9 +6,10 @@ public:
 
         
         for(int i=0;i<n;i++) {
-     
-            m=min(m,prices[i]);
-            profit=max(profit,(prices[i]-m));
+
+                
+                m=min(m,prices[i]);
+                profit=max(profit,(prices[i]-m));
             
         }
         
