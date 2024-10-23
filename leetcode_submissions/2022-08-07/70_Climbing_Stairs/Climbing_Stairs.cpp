@@ -4,8 +4,7 @@ public:
     int climbStairs(int n) {
         
         int dp[n+1];
-        
-        if(n<4) return n;
+        memset(dp, -1 ,sizeof(dp));
         
         for(int i=0;i<4;i++) dp[i]=i;
         
