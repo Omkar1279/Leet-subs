@@ -5,7 +5,7 @@
 - Runtime: N/A
 - Memory: N/A
 - Status: Runtime Error
-- Timestamp: 2021-11-20 15:24:38
+- Timestamp: 2021-11-20 15:18:30
 
 ## Problem Link
 [Jump Game II](https://leetcode.com/problems/jump-game-ii)
