@@ -25,16 +25,7 @@ public:
         
         if(nums.size()==3 && avg(nums)) {
             swap(nums[0],nums[1]);
-            
         }
-        return nums;
-        
-        while(nums.size()==4 && avg(nums)) {
-            swap(nums[0],nums[1]);
-            swap(nums[1],nums[2]);
-            
-        }
-        return nums;
         
         while(avg(nums)) {
             
