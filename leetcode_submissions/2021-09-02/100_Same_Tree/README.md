@@ -2,10 +2,10 @@
 
 - Difficulty: Unknown
 - Language: cpp
-- Runtime: 4 ms
-- Memory: 10.3 MB
+- Runtime: 7 ms
+- Memory: 10.1 MB
 - Status: Accepted
-- Timestamp: 2021-09-02 11:21:34
+- Timestamp: 2021-09-02 11:21:26
 
 ## Problem Link
 [Same Tree](https://leetcode.com/problems/same-tree)
