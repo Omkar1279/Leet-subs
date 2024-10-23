@@ -4,7 +4,7 @@ public:
     int rearrangeCharacters(string s, string target) {
         
         int Min=INT_MAX;
-        unordered_map<char,int> m;unordered_map<char,int> mt;
+        map<char,int> m;map<char,int> mt;
         
         for(int i=0;i<s.size();i++) {
             m[s[i]]++;
