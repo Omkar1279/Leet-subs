@@ -2,10 +2,10 @@
 
 - Difficulty: Unknown
 - Language: cpp
-- Runtime: 3 ms
-- Memory: 9.3 MB
+- Runtime: 7 ms
+- Memory: 9.2 MB
 - Status: Accepted
-- Timestamp: 2022-08-20 18:54:42
+- Timestamp: 2022-08-20 18:46:43
 
 ## Problem Link
 [Longest Common Prefix](https://leetcode.com/problems/longest-common-prefix)
