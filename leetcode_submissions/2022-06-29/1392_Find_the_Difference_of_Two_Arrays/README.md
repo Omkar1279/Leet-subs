@@ -2,10 +2,10 @@
 
 - Difficulty: Unknown
 - Language: cpp
-- Runtime: 114 ms
-- Memory: 36.8 MB
-- Status: Accepted
-- Timestamp: 2022-06-29 12:12:27
+- Runtime: N/A
+- Memory: N/A
+- Status: Wrong Answer
+- Timestamp: 2022-06-29 12:02:44
 
 ## Problem Link
 [Find the Difference of Two Arrays](https://leetcode.com/problems/find-the-difference-of-two-arrays)
