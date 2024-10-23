@@ -5,7 +5,7 @@ public:
         
         int n=nums.size(),cnt=0,ans=0;string hash;
         
-        set<string>mp;
+        unordered_set<string>mp;
         
         for(int i=0;i<n;i++) {
 
