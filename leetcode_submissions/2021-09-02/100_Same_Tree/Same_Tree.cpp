@@ -40,7 +40,7 @@ public:
         
         if(p && !q) return 0;
         else if(!p && q) return 0;
-        else if(!p && !q) return 1;
+        else if(!p && !q) return 0;
         
         vector<int> s;
         vector<int> t;
