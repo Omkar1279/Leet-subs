@@ -2,10 +2,10 @@
 
 - Difficulty: Unknown
 - Language: cpp
-- Runtime: 3 ms
-- Memory: 9.6 MB
+- Runtime: N/A
+- Memory: N/A
 - Status: N/A
-- Timestamp: 2024-07-23 00:05:24
+- Timestamp: 2024-07-23 00:03:52
 
 ## Problem Link
 [Elimination Game](https://leetcode.com/problems/)
