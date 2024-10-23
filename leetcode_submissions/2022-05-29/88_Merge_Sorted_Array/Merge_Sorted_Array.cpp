@@ -2,6 +2,8 @@ class Solution {
 public:
     void merge(vector<int>& nums1, int m, vector<int>& nums2, int n) {
         
+        int pos=0;
+        
         if(m==0) {
             nums1=nums2;
             return;
