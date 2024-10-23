@@ -1,5 +1,3 @@
-class Solution {
-public:
 int countNumbersWithUniqueDigits(int n) {
     int dp=1;
     int tmp=9;
@@ -9,4 +7,3 @@ int countNumbersWithUniqueDigits(int n) {
     }
     return dp;
 }
-};
