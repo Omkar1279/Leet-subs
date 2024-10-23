@@ -7,10 +7,8 @@ public:
         if(s.length() == 0) return 1;
         
         for(int i=0;i<t.length();i++) {
-            
-            if(s[j] == t[i])  j++;
 
-            if(j == s.length()-1 && s[j] != t[i]) return 0;
+            if(s[j] == t[i])  j++;
             
             if(j == s.length()-1) return 1;
         }
