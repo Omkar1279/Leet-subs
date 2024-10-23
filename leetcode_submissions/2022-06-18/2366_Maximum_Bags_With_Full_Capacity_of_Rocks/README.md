@@ -2,10 +2,10 @@
 
 - Difficulty: Unknown
 - Language: cpp
-- Runtime: 256 ms
-- Memory: 84.5 MB
+- Runtime: 229 ms
+- Memory: 86.8 MB
 - Status: Accepted
-- Timestamp: 2022-06-18 21:23:23
+- Timestamp: 2022-06-18 21:14:17
 
 ## Problem Link
 [Maximum Bags With Full Capacity of Rocks](https://leetcode.com/problems/maximum-bags-with-full-capacity-of-rocks)
