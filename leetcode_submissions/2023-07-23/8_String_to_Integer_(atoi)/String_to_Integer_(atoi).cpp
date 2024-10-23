@@ -1,6 +1,6 @@
 class Solution {
 public:
-    long f(int i, string s, int sign, long result) {
+    int f(int i, string s, int sign, int result) {
 
         if(sign*result<=INT_MIN) return INT_MIN;
         if(sign*result>=INT_MAX) return INT_MAX;
@@ -22,6 +22,6 @@ public:
         if(s[i] == '-') {sign = -1;i++;}
         else if(s[i] == '+') i++;
 
-        return (int)f(i, s, sign, 0);
+        return f(i, s, sign, 0);
     }
 };
