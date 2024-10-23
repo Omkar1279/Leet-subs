@@ -5,8 +5,11 @@ public:
         unordered_map<int,int> mp;
         vector<int>v;
         
-        for(auto& i:nums) {
-            for(int j:i) mp[j]++;
+        for(int i=0;i<nums.size();i++) {
+            for(int j=0;j<nums[i].size();j++) {
+                
+                mp[nums[i][j]]++;
+            }
         }
         
         for(int i:nums[0]) {
