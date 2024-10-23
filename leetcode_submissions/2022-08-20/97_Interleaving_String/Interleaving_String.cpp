@@ -3,7 +3,6 @@ public:
     bool f(int i,int j,string s1, string s2, string s3,vector<vector<int>> &dp) {
         
         if(i==s1.size() && j==s2.size()) return 1;
-        if(dp[i][j]!=-1) return dp[i][j];        
         
         bool res1=0,res2=0;
         if(i<s1.size() and s1[i]==s3[i+j]) res1=f(i+1,j,s1,s2,s3,dp);
