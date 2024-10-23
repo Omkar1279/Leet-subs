@@ -2,10 +2,10 @@
 
 - Difficulty: Unknown
 - Language: cpp
-- Runtime: 0 ms
-- Memory: 7.8 MB
+- Runtime: 3 ms
+- Memory: 7.9 MB
 - Status: Accepted
-- Timestamp: 2024-07-21 19:51:56
+- Timestamp: 2024-07-21 15:38:23
 
 ## Problem Link
 [Decode String](https://leetcode.com/problems/decode-string)
