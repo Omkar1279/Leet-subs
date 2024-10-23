@@ -1,22 +1,23 @@
 class Solution {
 public:
-    int minNumberOfHours(int ie, int ix,vector<int>& en, vector<int>& ex) {
+    int minNumberOfHours(int initialEnergy, int initialExperience, vector<int>& energy, vector<int>& experience) {
         
-        int n=en.size();
-        int val=0; //total hours needed
-        for(int i=0;i<n;i++){
-            if(en[i]>=ie){
-                val+=en[i]-ie+1; // adding additional hours in energy
-                ie+=en[i]-ie+1;
-            }
-            if(ex[i]>=ix){
-                val+=ex[i]-ix+1; // adding additional hours in experience
-                ix+=ex[i]-ix+1;
-            }
-            ie-=en[i];
-            ix+=ex[i];
+        int n=energy.size(),cnt=0;
+        
+        for(int i=0;i<n;i++) {
             
+            if(initialEnergy>=energy[i]) {
+                initialEnergy-=energy[i];
+            }
+            else {
+                cnt+=abs(initialEnergy-energy[i]);
+            }
+            
+            if(initialExperience<experience[i]) {
+                cnt+=abs(initialExperience-experience[i]);
+                initialExperience+=experience[i];
+            }
         }
-        return val;
+        return cnt;
     }
 };
