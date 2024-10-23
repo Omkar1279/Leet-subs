@@ -8,7 +8,16 @@ public:
         
         v[1]=1;  if(n==1) return v;
         
-        for(int i=2;i<=n;i++)  v[i]=v[i/2] + i%2;
+        for(int i=2;i<=n;i++) {
+            
+            if(i%2 == 0) {
+                
+                v[i]=v[i/2];
+                continue;
+            } 
+            else  v[i]=v[i/2]+1;
+            
+        }
         return v;
     }
 };
