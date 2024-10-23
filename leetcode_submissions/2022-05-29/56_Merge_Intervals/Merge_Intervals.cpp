@@ -5,9 +5,12 @@ public:
         int n=in.size();
         
         if(n<=1) return in;
-        vector<vector<int>> ans;vector<int> v;
+        vector<vector<int>> ans;
+        
+        vector<int> v;
         
         sort(in.begin(),in.end());
+    
 
         for(int i=1;i<n;i++) {
             
@@ -24,11 +27,11 @@ public:
                 }
             }
             
-            int start = ans.back()[0],end = ans.back()[1];
-            if((start <= in[i][0]) && (in[i][0] <= end)) {
+            vector<int> temp = ans.back();
+            if((temp[0] <= in[i][0]) && (in[i][0] <= temp[1])) {
                 
-                v.push_back(min(start,in[i][0]));
-                v.push_back(max(end,in[i][1]));
+                v.push_back(min(temp[0],in[i][0]));
+                v.push_back(max(temp[1],in[i][1]));
                 ans.pop_back();
                 ans.push_back(v);
                 v.clear();
