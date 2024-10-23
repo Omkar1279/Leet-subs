@@ -2,10 +2,10 @@
 
 - Difficulty: Unknown
 - Language: cpp
-- Runtime: 0 ms
-- Memory: 6 MB
+- Runtime: 3 ms
+- Memory: 5.9 MB
 - Status: Accepted
-- Timestamp: 2021-08-26 22:24:50
+- Timestamp: 2021-08-26 22:21:16
 
 ## Problem Link
 [Fibonacci Number](https://leetcode.com/problems/fibonacci-number)
