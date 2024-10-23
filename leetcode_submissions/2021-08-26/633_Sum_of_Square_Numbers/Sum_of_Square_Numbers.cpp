@@ -2,7 +2,7 @@ class Solution {
 public:
     bool judgeSquareSum(int c) {
         
-        if(c<2) return 1;
+        if(c==1) return 1;
                
         for(int i=0;i<c;i++) {
             
