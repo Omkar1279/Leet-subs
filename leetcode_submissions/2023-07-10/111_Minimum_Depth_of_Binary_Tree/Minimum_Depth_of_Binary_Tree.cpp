@@ -10,15 +10,14 @@
  * };
  */
 class Solution {
+    int f(TreeNode* root) {
+
+        if(!root) return 0;
+        if(min(f(root->left),f(root->right))==0) return max(f(root->left),f(root->right))+1;
+        return 1+min(f(root->left),f(root->right));
+    }
 public:
     int minDepth(TreeNode* root) {
-        
-        if (root==NULL)
-            return 0;
-        int ld=minDepth(root->left);
-        int rd=minDepth(root->right);
-        if(min(ld,rd)==0)
-            return max(ld,rd)+1;
-        return min(ld,rd) + 1;
+        return f(root);
     }
 };
