@@ -1,22 +1,19 @@
-class Solution {
-public:
-    bool validMountainArray(vector<int>& arr) {
-        int n = arr.size();
-        int i=0,j=n-1;
-        //mountain array if and only if: arr.length >= 3
-        //should start with decreasing order
-        if(n<3 || arr[0]>arr[1])return false;
-        
-        //found first decreasing number from begin
-        while(i<n-1&&arr[i]<arr[i+1]){
-            i++;
+bool validMountainArray(vector<int>& arr) {
+        int i = 0;
+        for(;i<arr.size()-1;i++){
+            if(arr[i]>arr[i+1]){
+                i++;
+                break;
+            }
+            else if(arr[i]==arr[i+1])
+                return false;
+                
         }
-        //found first decreasing number from end
-        while(j>0&&arr[j]<arr[j-1]){
-            j--;
-        }
+        if(i<2)return false;
         
-        //it should be same
-        return i>0 && i==j && j<n-1;
+        for(;i<arr.size();i++){
+            if(arr[i-1]<=arr[i])
+                return false;
+        }
+        return true;
     }
-};
