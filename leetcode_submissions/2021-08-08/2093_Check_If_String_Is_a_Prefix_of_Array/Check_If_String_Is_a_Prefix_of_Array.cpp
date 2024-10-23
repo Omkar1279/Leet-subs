@@ -4,25 +4,36 @@ public:
         
         string p;int i=0,j=0;
         
-        while(p.size()<=s.size()) {
+        p+=words[0];
+        
+        if(p.size() > s.size()){
+            return 0;
+            
+        }
+            
+        
+        while(p.size()+words[i+1].size() <= s.size()) {
+            
+            i++;
             
             p+=words[i];
             
-            if(p.size()>s.size())
-                return 0;
+        }
+        
+        if(p.size() != s.size())
+            return 0;
+        
+        if(p.size() == s.size()) {
             
-            if(p.size()==s.size()) {
+            for(int k=0;k<s.size();k++) {
                 
-                for(int k=0;k<s.size();k++) {
-                    
-                    if(s[k] != p[k])
-                        return 0;
-                }
-                return 1;
+                if(s[k] != p[k])
+                    return 0;
+                
             }
             
-            i++;
         }
+            
         return 1;
     }
 };
