@@ -10,7 +10,7 @@ public:
             
             if(i>0 && i<v.size()-1) {
                 
-                if(v[i] == (float)((v[i+1]+v[i-1])/2))
+                if(v[i] == (v[i+1]+v[i-1])/2)
                     index.push_back(i);
             }
             
@@ -22,10 +22,6 @@ public:
     }
     
     vector<int> rearrangeArray(vector<int>& nums) {
-        
-        if(nums.size()==3 && avg(nums)) {
-            swap(nums[0],nums[1]);
-        }
         
         while(avg(nums)) {
             
