@@ -10,7 +10,7 @@ public:
             
             if(s[j] == t[i])  j++;
 
-            if(j == s.length()-1 && s[j] != t[i] && s.length()==1) return 0;
+            if(j == s.length()-1 && s[j] != t[i]) return 0;
             
             if(j == s.length()-1) return 1;
         }
