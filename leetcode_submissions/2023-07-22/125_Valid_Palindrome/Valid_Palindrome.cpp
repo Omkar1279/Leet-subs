@@ -7,7 +7,6 @@ public:
             if(isalpha(c)) {
                 s+=tolower(c);
             }
-            else if(isdigit(c)) s+=c;
         }
 
         string t=s;
