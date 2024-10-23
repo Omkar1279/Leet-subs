@@ -2,10 +2,10 @@
 
 - Difficulty: Unknown
 - Language: cpp
-- Runtime: 144 ms
-- Memory: 11.2 MB
-- Status: Accepted
-- Timestamp: 2021-11-09 11:15:29
+- Runtime: N/A
+- Memory: N/A
+- Status: Wrong Answer
+- Timestamp: 2021-11-09 11:14:20
 
 ## Problem Link
 [Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring)
