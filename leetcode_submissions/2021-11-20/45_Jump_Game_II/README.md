@@ -2,10 +2,10 @@
 
 - Difficulty: Unknown
 - Language: cpp
-- Runtime: 356 ms
-- Memory: 16.9 MB
+- Runtime: 352 ms
+- Memory: 17 MB
 - Status: Accepted
-- Timestamp: 2021-11-20 15:29:38
+- Timestamp: 2021-11-20 15:27:23
 
 ## Problem Link
 [Jump Game II](https://leetcode.com/problems/jump-game-ii)
