@@ -2,10 +2,10 @@
 
 - Difficulty: Unknown
 - Language: cpp
-- Runtime: 102 ms
-- Memory: 8.8 MB
+- Runtime: N/A
+- Memory: N/A
 - Status: N/A
-- Timestamp: 2024-09-13 01:48:03
+- Timestamp: 2024-09-13 01:45:25
 
 ## Problem Link
 [Predict the Winner](https://leetcode.com/problems/)
