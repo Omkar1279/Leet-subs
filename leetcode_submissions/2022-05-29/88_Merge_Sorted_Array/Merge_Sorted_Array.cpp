@@ -10,8 +10,8 @@ public:
         
         for(int i=0;i<m;i++) {
             
-            if(nums1[i] > nums2[0]) {
-                swap(nums1[i],nums2[0]);
+            if(nums1[i] > nums2[pos]) {
+                swap(nums1[i],nums2[pos]);
                 sort(nums2.begin(),nums2.end());
             }
         }
