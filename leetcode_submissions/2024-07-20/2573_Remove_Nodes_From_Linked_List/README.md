@@ -2,10 +2,10 @@
 
 - Difficulty: Unknown
 - Language: cpp
-- Runtime: 286 ms
-- Memory: 161.2 MB
+- Runtime: 294 ms
+- Memory: 168.6 MB
 - Status: Accepted
-- Timestamp: 2024-07-20 23:41:09
+- Timestamp: 2024-07-20 23:30:29
 
 ## Problem Link
 [Remove Nodes From Linked List](https://leetcode.com/problems/remove-nodes-from-linked-list)
