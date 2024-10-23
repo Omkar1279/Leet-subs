@@ -16,7 +16,7 @@ public:
         
         for(int i=0;i<nums.size();i++) {
             
-            mp[Sumofdigits(nums[i])].push_back(nums[i]);
+            mp[Sumofdigits(nums[i])].push_back(i);
         }
         
         for(auto it=mp.begin();it!=mp.end();it++) {
@@ -24,12 +24,22 @@ public:
             vector<int> v;
             
             v=it->second;
-            sort(v.begin(),v.end(), greater<int>());
             
             if(v.size()==1) continue;
             
-            sum=v[0]+v[1];
+            else if(v.size()==2) sum=nums[v[0]]+nums[v[1]];
             
+            else {
+                int lsum=0,lmax=0;
+                
+                for(int i=0;i<v.size();i++) {
+                    for(int j=i+1;j<v.size();j++) {
+                        lsum=nums[v[j]]+nums[v[i]];
+                        lmax=max(lsum,lmax);
+                    }
+                }
+                ans=max(ans,lmax);
+            }
             ans=max(ans,sum);
         }
         return ans;
