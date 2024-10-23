@@ -11,7 +11,7 @@ public:
         
         if(mp.empty()) return -1;
         
-        for(auto it=mp.rbegin();it!=mp.rend();it++) {
+        for(auto it=mp.begin();it!=mp.end();it++) {
             if(it->second>=m) {
                 m=it->second;
                 ans=it->first;
