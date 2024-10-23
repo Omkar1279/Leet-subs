@@ -2,10 +2,10 @@
 
 - Difficulty: Unknown
 - Language: cpp
-- Runtime: 150 ms
-- Memory: 19.9 MB
-- Status: Accepted
-- Timestamp: 2022-10-19 16:13:00
+- Runtime: N/A
+- Memory: N/A
+- Status: Runtime Error
+- Timestamp: 2022-10-19 16:12:31
 
 ## Problem Link
 [3Sum](https://leetcode.com/problems/3sum)
