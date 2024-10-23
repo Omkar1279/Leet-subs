@@ -13,15 +13,14 @@ public:
     
     ListNode* add(ListNode* &l1, ListNode* &l2,int c) {
         
-        int d1,d2,sum;
         if(l1==NULL && l2==NULL) {
             return c ? new ListNode(1) : nullptr;
         } 
         
-        d1 = l1 ? l1->val : 0;
-        d2 = l2 ? l2->val : 0;
+        int d1 = l1 ? l1->val : 0;
+        int d2 = l2 ? l2->val : 0;
         
-        sum=d1+d2+c;
+        int sum=d1+d2+c;
         
         return new ListNode (sum%10 , add(l1 ? l1->next : l1,l2 ? l2->next : l2, sum/10));
         
