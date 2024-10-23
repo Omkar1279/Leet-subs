@@ -2,7 +2,7 @@ class Solution {
 public:
     int percentageLetter(string s, char letter) {
         
-        int cnt=0;
+        float ans=0;
         unordered_map<char,int>m;
         
         for(auto ch : s) 
@@ -12,10 +12,8 @@ public:
         
         if(it == m.end()) return 0;
         
-        cnt = it->second;
+        ans = (it->second/(double) s.size());
 
-        double percent = (double)cnt/s.size();
-        int ans = percent*100;
-        return ans;
+        return ans*100;
     }
 };
