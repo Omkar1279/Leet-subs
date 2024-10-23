@@ -40,7 +40,7 @@ public:
            }
            
            while(!pq.empty()) {
-               x=pq.top();
+               x=pq.top();cout<<pq.top();
                build(ans,x);pq.pop();
             }
            
