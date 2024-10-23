@@ -7,6 +7,8 @@ public:
         for(auto ch : s) 
             if(ch==letter) cnt++;
 
-        return ((double)cnt/s.size())*100;
+        double percent = (double)cnt/s.size();
+
+        return percent*100;
     }
 };
