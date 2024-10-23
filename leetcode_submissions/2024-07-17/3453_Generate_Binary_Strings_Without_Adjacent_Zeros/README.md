@@ -2,10 +2,10 @@
 
 - Difficulty: Unknown
 - Language: cpp
-- Runtime: 8 ms
-- Memory: 21.9 MB
+- Runtime: 19 ms
+- Memory: 23.2 MB
 - Status: Accepted
-- Timestamp: 2024-07-17 23:10:03
+- Timestamp: 2024-07-17 22:53:55
 
 ## Problem Link
 [Generate Binary Strings Without Adjacent Zeros](https://leetcode.com/problems/generate-binary-strings-without-adjacent-zeros)
