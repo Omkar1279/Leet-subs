@@ -2,10 +2,10 @@
 
 - Difficulty: Unknown
 - Language: cpp
-- Runtime: 67 ms
-- Memory: 71.6 MB
+- Runtime: 68 ms
+- Memory: 71.5 MB
 - Status: Accepted
-- Timestamp: 2021-08-30 14:45:36
+- Timestamp: 2021-08-30 14:44:47
 
 ## Problem Link
 [Add Two Numbers](https://leetcode.com/problems/add-two-numbers)
