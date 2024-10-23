@@ -4,9 +4,9 @@ public:
         
         unordered_map<int,int> mp;int n=nums.size();set<vector<int>> s;
         
-        for(int i=0;i<n-2;i++) {
+        for(int i=0;i<n-1;i++) {
             
-            for(int j=i+1;j<n-1;j++) {
+            for(int j=i+1;j<n;j++) {
                 
                 int sum=nums[i]+nums[j];
                 sum=(-1)*sum;
@@ -20,8 +20,6 @@ public:
             }
             mp[nums[i]]=i;
         }
-        if(nums[n-2]+nums[n-1]+nums[n-3]==0) s.insert({n-3,n-2,n-1});
-        
         vector<vector<int>> v(s.begin(),s.end()) ;
         return v;
     }
