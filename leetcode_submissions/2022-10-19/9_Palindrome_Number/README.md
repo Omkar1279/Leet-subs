@@ -2,10 +2,10 @@
 
 - Difficulty: Unknown
 - Language: cpp
-- Runtime: 55 ms
-- Memory: 6 MB
-- Status: Accepted
-- Timestamp: 2022-10-19 13:35:40
+- Runtime: N/A
+- Memory: N/A
+- Status: Wrong Answer
+- Timestamp: 2022-10-19 13:34:54
 
 ## Problem Link
 [Palindrome Number](https://leetcode.com/problems/palindrome-number)
