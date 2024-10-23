@@ -2,10 +2,10 @@
 
 - Difficulty: Unknown
 - Language: cpp
-- Runtime: N/A
-- Memory: N/A
-- Status: Compile Error
-- Timestamp: 2021-09-02 09:37:56
+- Runtime: 7 ms
+- Memory: 10.1 MB
+- Status: Accepted
+- Timestamp: 2021-09-02 08:19:24
 
 ## Problem Link
 [Binary Tree Inorder Traversal](https://leetcode.com/problems/binary-tree-inorder-traversal)
