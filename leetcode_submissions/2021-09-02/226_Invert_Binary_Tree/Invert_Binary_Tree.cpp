@@ -15,7 +15,7 @@ public:
         
         if(!root) return NULL;
         
-        else return new TreeNode(root->val,invertTree(root->right),invertTree(root->left));
+        return new TreeNode(root->val,invertTree(root->right),invertTree(root->left));
         
     }
 };
