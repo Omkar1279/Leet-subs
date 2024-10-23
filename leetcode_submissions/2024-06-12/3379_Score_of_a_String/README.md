@@ -2,10 +2,10 @@
 
 - Difficulty: Unknown
 - Language: cpp
-- Runtime: 0 ms
-- Memory: 7.9 MB
-- Status: Accepted
-- Timestamp: 2024-06-12 13:32:27
+- Runtime: N/A
+- Memory: N/A
+- Status: Wrong Answer
+- Timestamp: 2024-06-12 13:28:21
 
 ## Problem Link
 [Score of a String](https://leetcode.com/problems/score-of-a-string)
