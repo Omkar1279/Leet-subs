@@ -2,10 +2,10 @@
 
 - Difficulty: Unknown
 - Language: cpp
-- Runtime: 155 ms
-- Memory: 67.7 MB
-- Status: Accepted
-- Timestamp: 2022-08-20 11:40:55
+- Runtime: N/A
+- Memory: N/A
+- Status: Wrong Answer
+- Timestamp: 2022-08-20 11:39:35
 
 ## Problem Link
 [Maximum Subarray](https://leetcode.com/problems/maximum-subarray)
