@@ -22,7 +22,7 @@ public:
         
         int sum=d1+d2+c;
         
-        return new ListNode (sum%10 , add(l1 ? l1->next : l1,l2 ? l2->next : l2, sum/10));
+        return new ListNode (sum%10 , add(l1->next ,l2->next , sum/10));
         
     }
     
