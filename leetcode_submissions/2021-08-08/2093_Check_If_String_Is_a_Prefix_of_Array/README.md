@@ -2,10 +2,10 @@
 
 - Difficulty: Unknown
 - Language: cpp
-- Runtime: 8 ms
-- Memory: 14 MB
-- Status: Accepted
-- Timestamp: 2021-08-08 08:55:46
+- Runtime: N/A
+- Memory: N/A
+- Status: Runtime Error
+- Timestamp: 2021-08-08 08:50:57
 
 ## Problem Link
 [Check If String Is a Prefix of Array](https://leetcode.com/problems/check-if-string-is-a-prefix-of-array)
