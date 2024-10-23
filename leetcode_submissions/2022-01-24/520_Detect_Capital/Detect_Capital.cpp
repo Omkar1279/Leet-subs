@@ -1,17 +1,43 @@
 class Solution {
 public:
+    bool iscapital(char c) {
+        
+        if((int)c <=90 && (int)c >=65) 
+            return 1;
+    
+        else return 0;
+    }
+    
     bool detectCapitalUse(string word) {
-        if(word.length() < 2) return true;
-        if(isupper(word[0]) && isupper(word[1])){
-            for(int i = 2; i < word.length(); i++){
-                if(islower(word[i])) return false;
+        
+        for(int i=2;i<word.length();i++) {
+            
+            if(iscapital(word[0]) && iscapital(word[1])) {
+                
+                if(word.length() == 2) return 1;
+                
+                else {
+                    
+                    if(!iscapital(word[i])) return 0;
+                    else continue;
+                }
+            }
+            
+            else if(iscapital(word[0]) && !iscapital(word[1])) {
+                
+                if(word.length() == 2) return 1;
+                
+                else {
+                    
+                    if(iscapital(word[i])) return 0;
+                    else continue;
+                }
+            }
+            
+            else {
+                if(iscapital(word[i])) return 0;
             }
         }
-        else{
-            for(int i = 1; i < word.length(); i++){
-                if(isupper(word[i])) return false;
-            }
-        }
-        return true;
+        return 1;
     }
 };
